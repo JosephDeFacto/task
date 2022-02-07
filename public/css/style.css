@@ -1,0 +1,175 @@
+body {
+    background-color: azure !important;
+    font-family: "Helvetica", sans-serif;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.header-title {
+    text-align: center;
+    font-family: "Helvetica";
+    padding: 10px;
+}
+
+.card {
+    margin: 10px 0;
+    padding: 50px;
+}
+
+.card-img-top {
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 50px !important;
+}
+
+/*.card-title {
+    text-align: center;
+    font-family: ui-monospace, cursive;
+    font-size: 18px;
+    cursor: pointer;
+}*/
+.card-title {
+    position: absolute;
+    top: 50%;
+    font-family: monospace;
+    /* color: #e3e5e6;
+     box-shadow: 1px 4px 8px 0;*/
+    color: white;
+    /*box-shadow: 1px 1px 5px 1.5px;*/
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.card-title:hover {
+    color: coral;
+}
+
+.card-text {
+    font-family: monospace;
+    line-height: 1;
+    box-shadow: .2px 1px #5eb5e0;
+    color: blueviolet;
+}
+
+.facilities {
+    display: flex;
+    flex-direction: row;
+}
+
+.wifi-facility, .score-facility, .day-price {
+    color: blueviolet;
+    display: flex;
+    border-right: 1px solid bisque;
+    padding-left: 100px !important;
+}
+
+.col-sm-4 {
+    padding-left: 0px;
+}
+
+.api-view-link {
+    text-decoration: none;
+}
+
+.banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.card-title-centered {
+    position: absolute;
+    left: 50px;
+    bottom: 120px;
+    font-family: monospace;
+   /* color: #e3e5e6;
+    box-shadow: 1px 4px 8px 0;*/
+    color: white;
+    /*box-shadow: 1px 1px 5px 1.5px;*/
+    font-size: 30px;
+}
+
+.col {
+  display: block;
+  text-align: center;
+}
+
+.row {
+    margin: 10px;
+}
+
+.nav, .navbar {
+    justify-content: flex-start !important;
+}
+
+ul {
+    text-decoration: none !important;
+}
+
+li {
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+
+.navbar-brand {
+    font-size: 20px;
+    font-family: monospace;
+    padding-top: 0;
+}
+
+li a {
+    text-decoration: none !important;
+}
+
+.search-form {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+input[type=text] {
+    background-color: azure;
+}
+
+
+input[type=text]:hover {
+    color: #5eb5e0;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    color: #5eb5e0;
+}
+
+.col-sm-3 {
+    margin-top: 30px;
+    text-align: center;
+    color: blueviolet;
+}
+
+.col-sm-12 {
+    color: blue;
+    font-size: 35px;
+    right: 200px;
+}

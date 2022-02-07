@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for property in data %}
+        <img class="banner" alt="apartment" src="{{ property.picture_url_amazon }}">
+    <div class="container">
+        <div class="row">
+            {
+            <h1 class="card-title-centered">{{ property.name }}<br>{{ property.city }}</h1>
+            {#</div>#}
+            <div class="col-sm-12">Price per day: {{ property.price }}{{ property.label }}</div>
+
+            <div class="col-sm-3">Can sleep max: {{ property.can_sleep_max }}</div>
+            <div class="col-sm-3">Bathrooms: {{ property.bathrooms }}</div>
+            <div class="col-sm-3">Bedrooms{{ property.bedrooms }}</div>
+            <div class="col-sm-3">Livingrooms: {{ property.livingrooms }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">Contact name: {{ property.contact_name }}</div>
+            <div class="col-sm-3">Contact telephone: {{ property.contact_telephone }}</div>
+            <div class="col-sm-3">Contact via mobile phone: {{ property.contact_telephone }}</div>
+            <div class="col-sm-3">Email: {{ property.email }}</div>
+        </div>
+
+        {% endfor %}
+
+    <footer>
+        @owner-name
+    </footer>
+    </div>
+{% endblock %}

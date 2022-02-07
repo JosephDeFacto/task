@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ApiController!{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="search-form">
+            <form action="{{ path('api_post') }}" method="POST">
+                <input type="text" name="search">
+                <button type="submit" value="submit">Submit</button>
+            </form>
+        </div>
+ {#       {{ dump(result) }}#}
+
+        <div class="row">
+            {% for property in result %}
+                <div class="card">
+                    <img class="card-img-top" alt="apartment" src="{{ property.picture_url_amazon }}">
+                    <div class="card-body">
+                        <div class="card-title">{{ property.name }} ({{ property.area_name }})</div>
+                        <p class="card-text">{{ property.object_description_short|striptags|u.truncate(200, '...')|raw }}</p>
+                        <div class="facilities">
+                            <div class="col-sm-4 wifi-facility">
+                                {% if property.facility_wifi != "N" %}
+                                WI-FI <i class="bi bi-check"></i>
+                                {% endif %}
+                            </div>
+                            <div class="col-sm-4 score-facility">
+                                Guest review score: {{ property.objects_realestates_guest_reveiw }}
+
+                            </div>
+                            <div class="col-sm-4 day-price">
+                                <!-- Not sure if this price is per day since there are only min_price and max_price -->
+                                Price per day: {{ property.currency_label }}{{ property.price_day_on_check_in }}
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-light"><a class="api-view-link" href="{{ path('api_view', {id: property.id}) }}">Details</a></button>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
